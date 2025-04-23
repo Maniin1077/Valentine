@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Forever Valentine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    /* HEART SHOWER STYLES */
+    .falling-heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      color: #ff4d6d;
+      animation: fall linear;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="banner-overlay"></div>
+    <img src="AA11.jpg" alt="Romantic Sunset" class="parallax">
+    <h1 class="banner-text">My Forever Valentine <span class="heartbeat">❤</span></h1>
+  </div>
+
+  <div class="container">
+    <div class="typing-text">You are the most beautiful part of my life ❤️</div>
+    <div class="heart-container">
+      <div class="heart"></div>
+      <div class="sparkles">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+      </div>
+    </div>
+
+    <div class="message card">
+      <h2>To My Soulmate,</h2>
+      <p>Uh're the melody that plays in my heart every moment...</p>
+      <div class="love-text">
+        <p>In the warmth of ur love, I've found every reason to believe in forever...</p>
+      </div>
+      <p class="signature">Always nd Only Urs</p>
+    </div>
+  </div>
+
+  <section class="love-letter card">
+    <h2>My Eternal Love Letter</h2>
+    <div class="letter-content">
+      <p>To,<br>
+        My Dearest Love…</p>
+      <p>From the moment you stepped into my life, everything changed, like the world turned softer, the sky became more infinite and time slowed down just for us.</p>
+      <p>There’s something magical about the way your smile makes the chaos of the world feel calm. When I look into your eyes, I see home. I see safety, adventure and a thousand beautiful stories we haven’t lived yet. You are the poem my heart never knew how to write until you came along and now, every beat speaks only your name.</p>
+      <p>Loving you feels like sunlight through the trees, like the warmth of a hug you’ve needed forever. It’s not just love — it’s something deeper. A connection that whispers, “I’ve found my person.” I could spend a lifetime trying to describe what you mean to me and still fall short, because no words could ever fully capture the way you make me feel.</p>
+      <p>You are my favorite thought, my constant inspiration, and the most beautiful part of my every day. Every second with you is a treasure I hold close, and every memory we create is another page in our forever story.</p>
+      <p>I want to grow with you, laugh with you, cry with you, and build a life where our love is the foundation. I want to be the reason you smile on hard days and the arms you run to when words fail. No matter what storms we may face, know that my heart is yours — fiercely, faithfully, forever.</p>
+      <p>And I ain’t perfect, 
+        But every time you look at me like I’m enough.
+        I feel like I could spend a lifetime jst learning how to love you more than yesterday, better than today.</p>
+      <p>Just you.<br>
+
+        Always you.</p>
+        <p class="closing">With every beat of my heart,
+          <br>I'm yours. Forever.
+
+
+
+        </p>
+    </div>
+  </section>
+
+  <div class="gallery">
+    <h2>Our Memories</h2>
+    <div class="gallery-grid">
+      <img src="AA2.jpeg" alt="Memory 1">
+      <img src="AA3.jpeg" alt="Memory 2">
+      <img src="AA4.jpeg" alt="Memory 3">
+      <img src="AA5.jpg" alt="Memory 4">
+    </div>
+  </div>
+
+  <div class="promises">
+    <h2>My Promises to You</h2>
+    <div class="promise-grid">
+      <div class="promise-card">
+        <h3>Promise #1</h3>
+        <p>I’ll be the one who holds ur hand through every bit of it, whether it’s love, pain, struggle or silence in btw.</p>
+      </div>
+      <div class="promise-card">
+        <h3>Promise #2</h3>
+        <p>To be closest frd nd biggest supporter forever...To make uh smile at least once every single day.</p>
+      </div>
+      <div class="promise-card">
+        <h3>Promise #3</h3>
+        <p>To Love uh more than yesterday, better than today</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your original script -->
+  <script src="scripts.js"></script>
+
+  <!-- HEART SHOWER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('falling-heart');
+        heart.innerHTML = '❤'; // insert a heart emoji
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (10 + Math.random() * 20) + 'px'; // random size
+        heart.style.animationDuration = (2 + Math.random() * 3) + 's'; // random speed
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+
+      setInterval(createHeart, 200);
+    });
+  </script>
+</body>
+
+</html>
